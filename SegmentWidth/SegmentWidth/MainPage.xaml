@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:sys="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             xmlns:local="clr-namespace:SegmentWidth"
+                x:Class="SegmentWidth.MainPage">
+    <StackLayout  VerticalOptions="CenterAndExpand">
+        <buttons:SfSegmentedControl HorizontalOptions="CenterAndExpand" VisibleSegmentsCount="3" SegmentWidth="130" BorderThickness="2"
+        SelectedIndex="2"
+        BorderColor="#3F3F3F"
+        FontColor="Black"
+        Color="Transparent"
+       CornerRadius="140"
+        SelectionTextColor="AliceBlue">
+            <sys:List x:TypeArguments="x:String">
+                <x:String>Formals</x:String>
+                <x:String>Casuals</x:String>
+                <x:String>Trendy</x:String>
+            </sys:List>
+        </buttons:SfSegmentedControl>
+        <buttons:SfSegmentedControl HorizontalOptions="CenterAndExpand"  SegmentWidth="100" BorderThickness="2"
+        VisibleSegmentsCount="3"
+        SelectedIndex="2"
+        BorderColor="#3F3F3F"
+        FontColor="Black"
+        Color="Transparent"
+        CornerRadius="100"                      
+        SelectionTextColor="AliceBlue">
+            <sys:List x:TypeArguments="x:String">
+                <x:String>Formals</x:String>
+                <x:String>Casuals</x:String>
+                <x:String>Trendy</x:String>
+            </sys:List>
+        </buttons:SfSegmentedControl>
+        <buttons:SfSegmentedControl  HorizontalOptions="CenterAndExpand" SegmentWidth="80" BorderThickness="2"
+        VisibleSegmentsCount="3"
+        SelectedIndex="2"
+        BorderColor="#3F3F3F"
+        FontColor="Black"
+         CornerRadius="80"
+        Color="Transparent"
+        SelectionTextColor="AliceBlue">
+            <sys:List x:TypeArguments="x:String">
+                <x:String>Formals</x:String>
+                <x:String>Casuals</x:String>
+                <x:String>Trendy</x:String>
+            </sys:List>
+        </buttons:SfSegmentedControl>
+        <buttons:SfSegmentedControl  HorizontalOptions="CenterAndExpand" SegmentWidth="60" BorderThickness="2"
+        VisibleSegmentsCount="3"
+        SelectedIndex="2"
+        BorderColor="#3F3F3F"
+        FontColor="Black"
+        Color="Transparent"
+        CornerRadius="60"
+        SelectionTextColor="AliceBlue">
+            <sys:List x:TypeArguments="x:String">
+                <x:String>Formals</x:String>
+                <x:String>Casuals</x:String>
+                <x:String>Trendy</x:String>
+            </sys:List>
+        </buttons:SfSegmentedControl>
+       
+    </StackLayout>
+</ContentPage>
