@@ -1,5 +1,6 @@
-# How-to-wrap-the-text-of-segment-in-SfSegmentedControl
+# How to set width for segment item
 This section explains how to set width for segment item in segmented control.
+
 # Getting Started with Xamarin Segmented Control (SfSegmentedControl)
 
 This section provides an overview for working with the segmented control for Xamarin.Forms. Walk through the entire process of creating a real-world application with the SfSegmentedControl.
