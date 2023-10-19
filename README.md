@@ -1,3 +1,5 @@
+# How-to-wrap-the-text-of-segment-in-SfSegmentedControl
+This section explains how to set width for segment item in segmented control.
 # Getting Started with Xamarin Segmented Control (SfSegmentedControl)
 
 This section provides an overview for working with the segmented control for Xamarin.Forms. Walk through the entire process of creating a real-world application with the SfSegmentedControl.
@@ -40,77 +42,67 @@ Set the control to content in ContentPage.
     <buttons:SfSegmentedControl  />
 </ContentPage.Content>
 ```
-## Adding supportive views to the application
-For the completeness of the ticket booking application, few framework controls are added to the application to get the data from the user.
-
-ViewModel class for the Entry, which we have used in our View.
-
-**[C#]**
-```
-    using Syncfusion.XForms.Buttons;
-    using System;
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Runtime.CompilerServices;
-    using Xamarin.Forms;
-    
-    namespace SegmentGettingStarted
-    {
-        class ViewModel : INotifyPropertyChanged
-        {
-            private string fromText="";
-            public string FromText
-            {
-                get { return fromText; }
-                set { fromText = value; NotifyPropertyChanged("FromText"); }
-            }
-            private string toText = "";
-            public string ToText
-            {
-                get { return toText; }
-                set { toText = value; NotifyPropertyChanged("ToText"); }
-            }
-            public ViewModel()
-            {
-            }
-            public event PropertyChangedEventHandler PropertyChanged;
-    
-            private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-            {
-                if (PropertyChanged != null)
-                {
-                    PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-                }
-            }
-        }
-    }
-```
-View can be created by the following code snippet.
+## Sample for Set width for segment item in segmented control
 
 **[XAML]**
-
 ```
-    <StackLayout
-        HorizontalOptions = "Center"
-        VerticalOptions="Center"
-        Padding="20,0,20,0">
-         <Label
-            Text="Bus Ticket Booking"
-            FontSize="Large"
-            FontAttributes="Bold"
-            HeightRequest="50"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"/>
-        <Entry
-            Placeholder="From"
-            Text="{Binding FromText,Mode=TwoWay}"
-            HeightRequest="50"
-            Margin="0,10,0,10"/>
-        <Entry
-            Placeholder="To"
-            Text="{Binding ToText}"
-            HeightRequest="50"
-            Margin="0,10,0,10"/>
+<StackLayout  VerticalOptions="CenterAndExpand">
+        <buttons:SfSegmentedControl HorizontalOptions="CenterAndExpand" VisibleSegmentsCount="3" SegmentWidth="130" BorderThickness="2"
+        SelectedIndex="2"
+        BorderColor="#3F3F3F"
+        FontColor="Black"
+        Color="Transparent"
+       CornerRadius="140"
+        SelectionTextColor="AliceBlue">
+            <sys:List x:TypeArguments="x:String">
+                <x:String>Formals</x:String>
+                <x:String>Casuals</x:String>
+                <x:String>Trendy</x:String>
+            </sys:List>
+        </buttons:SfSegmentedControl>
+        <buttons:SfSegmentedControl HorizontalOptions="CenterAndExpand"  SegmentWidth="100" BorderThickness="2"
+        VisibleSegmentsCount="3"
+        SelectedIndex="2"
+        BorderColor="#3F3F3F"
+        FontColor="Black"
+        Color="Transparent"
+        CornerRadius="100"                      
+        SelectionTextColor="AliceBlue">
+            <sys:List x:TypeArguments="x:String">
+                <x:String>Formals</x:String>
+                <x:String>Casuals</x:String>
+                <x:String>Trendy</x:String>
+            </sys:List>
+        </buttons:SfSegmentedControl>
+        <buttons:SfSegmentedControl  HorizontalOptions="CenterAndExpand" SegmentWidth="80" BorderThickness="2"
+        VisibleSegmentsCount="3"
+        SelectedIndex="2"
+        BorderColor="#3F3F3F"
+        FontColor="Black"
+         CornerRadius="80"
+        Color="Transparent"
+        SelectionTextColor="AliceBlue">
+            <sys:List x:TypeArguments="x:String">
+                <x:String>Formals</x:String>
+                <x:String>Casuals</x:String>
+                <x:String>Trendy</x:String>
+            </sys:List>
+        </buttons:SfSegmentedControl>
+        <buttons:SfSegmentedControl  HorizontalOptions="CenterAndExpand" SegmentWidth="60" BorderThickness="2"
+        VisibleSegmentsCount="3"
+        SelectedIndex="2"
+        BorderColor="#3F3F3F"
+        FontColor="Black"
+        Color="Transparent"
+        CornerRadius="60"
+        SelectionTextColor="AliceBlue">
+            <sys:List x:TypeArguments="x:String">
+                <x:String>Formals</x:String>
+                <x:String>Casuals</x:String>
+                <x:String>Trendy</x:String>
+            </sys:List>
+        </buttons:SfSegmentedControl>
+       
     </StackLayout>
 ```
 ## How to run this application?
